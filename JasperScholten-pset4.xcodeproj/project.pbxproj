@@ -1,0 +1,309 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A44A0A6B1DE1B3BF0041D78E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A0A6A1DE1B3BF0041D78E /* AppDelegate.swift */; };
+		A44A0A6D1DE1B3BF0041D78E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A0A6C1DE1B3BF0041D78E /* ViewController.swift */; };
+		A44A0A701DE1B3BF0041D78E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44A0A6E1DE1B3BF0041D78E /* Main.storyboard */; };
+		A44A0A721DE1B3BF0041D78E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A44A0A711DE1B3BF0041D78E /* Assets.xcassets */; };
+		A44A0A751DE1B3BF0041D78E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44A0A731DE1B3BF0041D78E /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A44A0A671DE1B3BF0041D78E /* JasperScholten-pset4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JasperScholten-pset4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A44A0A6A1DE1B3BF0041D78E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A44A0A6C1DE1B3BF0041D78E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A44A0A6F1DE1B3BF0041D78E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A44A0A711DE1B3BF0041D78E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A44A0A741DE1B3BF0041D78E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A44A0A761DE1B3BF0041D78E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A44A0A641DE1B3BF0041D78E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A44A0A5E1DE1B3BF0041D78E = {
+			isa = PBXGroup;
+			children = (
+				A44A0A691DE1B3BF0041D78E /* JasperScholten-pset4 */,
+				A44A0A681DE1B3BF0041D78E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A44A0A681DE1B3BF0041D78E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A44A0A671DE1B3BF0041D78E /* JasperScholten-pset4.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A44A0A691DE1B3BF0041D78E /* JasperScholten-pset4 */ = {
+			isa = PBXGroup;
+			children = (
+				A44A0A6A1DE1B3BF0041D78E /* AppDelegate.swift */,
+				A44A0A6C1DE1B3BF0041D78E /* ViewController.swift */,
+				A44A0A6E1DE1B3BF0041D78E /* Main.storyboard */,
+				A44A0A711DE1B3BF0041D78E /* Assets.xcassets */,
+				A44A0A731DE1B3BF0041D78E /* LaunchScreen.storyboard */,
+				A44A0A761DE1B3BF0041D78E /* Info.plist */,
+			);
+			path = "JasperScholten-pset4";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A44A0A661DE1B3BF0041D78E /* JasperScholten-pset4 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A44A0A791DE1B3BF0041D78E /* Build configuration list for PBXNativeTarget "JasperScholten-pset4" */;
+			buildPhases = (
+				A44A0A631DE1B3BF0041D78E /* Sources */,
+				A44A0A641DE1B3BF0041D78E /* Frameworks */,
+				A44A0A651DE1B3BF0041D78E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "JasperScholten-pset4";
+			productName = "JasperScholten-pset4";
+			productReference = A44A0A671DE1B3BF0041D78E /* JasperScholten-pset4.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A44A0A5F1DE1B3BF0041D78E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Jasper Scholten";
+				TargetAttributes = {
+					A44A0A661DE1B3BF0041D78E = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 3F7K5ABT44;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A44A0A621DE1B3BF0041D78E /* Build configuration list for PBXProject "JasperScholten-pset4" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A44A0A5E1DE1B3BF0041D78E;
+			productRefGroup = A44A0A681DE1B3BF0041D78E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A44A0A661DE1B3BF0041D78E /* JasperScholten-pset4 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A44A0A651DE1B3BF0041D78E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A44A0A751DE1B3BF0041D78E /* LaunchScreen.storyboard in Resources */,
+				A44A0A721DE1B3BF0041D78E /* Assets.xcassets in Resources */,
+				A44A0A701DE1B3BF0041D78E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A44A0A631DE1B3BF0041D78E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A44A0A6D1DE1B3BF0041D78E /* ViewController.swift in Sources */,
+				A44A0A6B1DE1B3BF0041D78E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A44A0A6E1DE1B3BF0041D78E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A44A0A6F1DE1B3BF0041D78E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A44A0A731DE1B3BF0041D78E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A44A0A741DE1B3BF0041D78E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A44A0A771DE1B3BF0041D78E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A44A0A781DE1B3BF0041D78E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A44A0A7A1DE1B3BF0041D78E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3F7K5ABT44;
+				INFOPLIST_FILE = "JasperScholten-pset4/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "nl.mprog.JasperScholten-pset4";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		A44A0A7B1DE1B3BF0041D78E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3F7K5ABT44;
+				INFOPLIST_FILE = "JasperScholten-pset4/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "nl.mprog.JasperScholten-pset4";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A44A0A621DE1B3BF0041D78E /* Build configuration list for PBXProject "JasperScholten-pset4" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A44A0A771DE1B3BF0041D78E /* Debug */,
+				A44A0A781DE1B3BF0041D78E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A44A0A791DE1B3BF0041D78E /* Build configuration list for PBXNativeTarget "JasperScholten-pset4" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A44A0A7A1DE1B3BF0041D78E /* Debug */,
+				A44A0A7B1DE1B3BF0041D78E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A44A0A5F1DE1B3BF0041D78E /* Project object */;
+}
