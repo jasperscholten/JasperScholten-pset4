@@ -14,6 +14,7 @@
 		A44A0A751DE1B3BF0041D78E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44A0A731DE1B3BF0041D78E /* LaunchScreen.storyboard */; };
 		A4A017191DE1BA41003D9231 /* TodoItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A017181DE1BA41003D9231 /* TodoItemCell.swift */; };
 		A4A017321DE32B75003D9231 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4A017251DE32B25003D9231 /* SQLite.framework */; };
+		A4A017361DE330CC003D9231 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A017351DE330CC003D9231 /* DatabaseHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		A44A0A761DE1B3BF0041D78E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4A017181DE1BA41003D9231 /* TodoItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoItemCell.swift; sourceTree = "<group>"; };
 		A4A0171A1DE32B24003D9231 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
+		A4A017351DE330CC003D9231 /* DatabaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				A44A0A711DE1B3BF0041D78E /* Assets.xcassets */,
 				A44A0A731DE1B3BF0041D78E /* LaunchScreen.storyboard */,
 				A44A0A761DE1B3BF0041D78E /* Info.plist */,
+				A4A017351DE330CC003D9231 /* DatabaseHelper.swift */,
 			);
 			path = "JasperScholten-pset4";
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4A017361DE330CC003D9231 /* DatabaseHelper.swift in Sources */,
 				A44A0A6D1DE1B3BF0041D78E /* ViewController.swift in Sources */,
 				A4A017191DE1BA41003D9231 /* TodoItemCell.swift in Sources */,
 				A44A0A6B1DE1B3BF0041D78E /* AppDelegate.swift in Sources */,
