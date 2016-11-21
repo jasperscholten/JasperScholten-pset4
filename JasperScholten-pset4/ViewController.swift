@@ -38,15 +38,31 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listItems.count
+        // return listItems.count
+        
+        var count: Int?
+        
+        do {
+            count = try db!.countRows()
+        } catch {
+            print(error)
+        }
+        
+        return count!
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "itemCell", for: indexPath) as! TodoItemCell
         
-        cell.listItem.text = listItems[indexPath.row]
+        // cell.listItem.text = listItems[indexPath.row]
         
+        do {
+            cell.listItem.text = try db!.populate()
+        } catch {
+            print(error)
+        }
+            
         return cell
     
     }
@@ -55,10 +71,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         do {
             try db!.add(item: inputField.text!)
+            
+            /* Helemaal niet nodig...
             let newItem = try db!.populate()
-            listItems.append(newItem!)
+            listItems.append(newItem!)*/
+            
             // How to insert instead of updating complete table?
             self.tableView.reloadData()
+            
+            // let index = IndexPath.init(row: 1, section: 0)
+            // self.tableView.reloadRows(at: [index], with: .none)
+            
         } catch {
             print(error)
         }

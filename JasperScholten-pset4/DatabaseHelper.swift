@@ -69,14 +69,18 @@ class DatabaseHelper {
         
     }
     
-    /*func populate() throws {
+    /*func populate() throws -> Array<Row> {
+        
+        var result: Array<Row>
         
         do {
-            let all = Array(try db!.prepare(todo))
-            print(all)
+            result = Array(try db!.prepare(todo))
+            print(result)
         } catch {
             throw error
         }
+     
+        return result
         
     }*/
     
@@ -95,6 +99,10 @@ class DatabaseHelper {
         
         return result
         
+    }
+    
+    func countRows() throws -> Int {
+        return try db!.scalar(todo.count)
     }
     
 }
