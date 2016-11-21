@@ -20,9 +20,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var listItems = ["Type new item in field and click add", "Delete item by swiping left", "Check item by swiping right"]
     
+    private let db = DatabaseHelper()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        if db == nil {
+            print("Error")
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,11 +53,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBAction func addItem(_ sender: Any) {
         
-        // add item to tableView
-        
-        // append to array
-        listItems.append(inputField.text!)
-        print(listItems)
+        do {
+            try db!.add(item: inputField.text!)
+            let newItem = try db!.populate()
+            listItems.append(newItem!)
+            // How to insert instead of updating complete table?
+            self.tableView.reloadData()
+        } catch {
+            print(error)
+        }
     }
 
 }
