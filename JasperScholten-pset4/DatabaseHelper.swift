@@ -69,36 +69,24 @@ class DatabaseHelper {
         
     }
     
-    /*func populate() throws -> Array<Row> {
-        
-        var result: Array<Row>
-        
-        do {
-            result = Array(try db!.prepare(todo))
-            print(result)
-        } catch {
-            throw error
-        }
-     
-        return result
-        
-    }*/
-    
-    func populate() throws -> String? {
+    func populate(index: Int) throws -> String? {
         
         var result: String?
+        var count = 0
         
         do {
             for list in try db!.prepare(todo) {
-                result = "\(list[item]!)"
-                print(result ?? "Something went wrong")
+                if count == index {
+                    result = "\(list[item]!)"
+                    print("Test: \(result ?? "Something went wrong")")
+                }
+                count += 1
             }
         } catch {
             throw error
         }
         
         return result
-        
     }
     
     func countRows() throws -> Int {

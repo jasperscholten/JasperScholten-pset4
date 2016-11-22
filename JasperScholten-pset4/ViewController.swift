@@ -18,8 +18,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var inputField: UITextField!
     
-    var listItems = ["Type new item in field and click add", "Delete item by swiping left", "Check item by swiping right"]
-    
     private let db = DatabaseHelper()
     
     override func viewDidLoad() {
@@ -38,7 +36,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // return listItems.count
         
         var count: Int?
         
@@ -55,10 +52,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "itemCell", for: indexPath) as! TodoItemCell
         
-        // cell.listItem.text = listItems[indexPath.row]
-        
         do {
-            cell.listItem.text = try db!.populate()
+            cell.listItem.text = try db!.populate(index: indexPath.row)
+            // cell.listItem.text = try db!.populate()
         } catch {
             print(error)
         }
