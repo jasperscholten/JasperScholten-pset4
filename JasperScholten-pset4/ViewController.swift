@@ -63,19 +63,26 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            do {
+                try db!.delete(index: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            } catch {
+                print(error)
+            }
+        }
+    }
+    
     @IBAction func addItem(_ sender: Any) {
         
         do {
             try db!.add(item: inputField.text!)
-            
-            /* Helemaal niet nodig...
-            let newItem = try db!.populate()
-            listItems.append(newItem!)*/
+            inputField.text = ""
             
             // How to insert instead of updating complete table?
             self.tableView.reloadData()
-            
-            // let index = IndexPath.init(row: 1, section: 0)
+
             // self.tableView.reloadRows(at: [index], with: .none)
             
         } catch {
