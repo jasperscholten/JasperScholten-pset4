@@ -60,7 +60,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         do {
             cell.listItem.text = try db!.populate(index: indexPath.row)
-            print("Table: \(try db!.populateCheck(index: indexPath.row))")
+            let checkState = try db!.populateCheck(index: indexPath.row)
+            cell.checkSwitch.setOn(checkState, animated: true)
         } catch {
             print(error)
         }
@@ -88,15 +89,26 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             inputField.text = ""
             
             // How to insert instead of updating complete table?
-            self.tableView.reloadData()
-
             // self.tableView.reloadRows(at: [index], with: .none)
+            self.tableView.reloadData()
             
         } catch {
-            print("Error thrown:")
             print(error)
         }
     }
 
+    @IBAction func checkItem(_ sender: Any) {
+        
+        // http://stackoverflow.com/questions/39603922/getting-row-of-uitableview-cell-on-button-press-swift-3
+        let switchPos = (sender as AnyObject).convert(CGPoint.zero, to: self.tableView)
+        let indexPath = self.tableView.indexPathForRow(at: switchPos)
+        
+        do {
+            try db!.checkSwitch(index: indexPath!.row)
+        } catch {
+            print(error)
+        }
+    }
+    
 }
 

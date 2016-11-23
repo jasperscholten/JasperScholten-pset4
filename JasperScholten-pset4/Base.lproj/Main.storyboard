@@ -102,7 +102,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6j8-i2-Sb3">
-                                                            <rect key="frame" x="8" y="11" width="327" height="21"/>
+                                                            <rect key="frame" x="72" y="11" width="263" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="enw-wE-5iZ"/>
                                                             </constraints>
@@ -110,15 +110,25 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XAK-Ob-cPa">
+                                                            <rect key="frame" x="8" y="6" width="51" height="31"/>
+                                                            <connections>
+                                                                <action selector="checkItem:" destination="BYZ-38-t0r" eventType="valueChanged" id="eyg-iv-S8j"/>
+                                                            </connections>
+                                                        </switch>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="6j8-i2-Sb3" firstAttribute="leading" secondItem="MfS-qQ-nQJ" secondAttribute="leadingMargin" id="B0N-sK-gkP"/>
+                                                        <constraint firstAttribute="bottom" secondItem="XAK-Ob-cPa" secondAttribute="bottom" constant="6" id="Dvl-94-5bn"/>
                                                         <constraint firstItem="6j8-i2-Sb3" firstAttribute="top" secondItem="MfS-qQ-nQJ" secondAttribute="topMargin" constant="3" id="HE4-0n-lI7"/>
                                                         <constraint firstItem="6j8-i2-Sb3" firstAttribute="trailing" secondItem="MfS-qQ-nQJ" secondAttribute="trailingMargin" id="OJD-gE-ZYh"/>
                                                         <constraint firstAttribute="bottomMargin" secondItem="6j8-i2-Sb3" secondAttribute="bottom" constant="3" id="QVf-km-6Cj"/>
+                                                        <constraint firstItem="XAK-Ob-cPa" firstAttribute="leading" secondItem="MfS-qQ-nQJ" secondAttribute="leading" constant="8" id="Z5A-uX-BFV"/>
+                                                        <constraint firstItem="XAK-Ob-cPa" firstAttribute="top" secondItem="MfS-qQ-nQJ" secondAttribute="top" constant="6" id="bqX-mg-WpA"/>
+                                                        <constraint firstItem="6j8-i2-Sb3" firstAttribute="leading" secondItem="XAK-Ob-cPa" secondAttribute="trailing" constant="15" id="iZU-aB-wCZ"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
+                                                    <outlet property="checkSwitch" destination="XAK-Ob-cPa" id="bwL-Rm-lGI"/>
                                                     <outlet property="listItem" destination="6j8-i2-Sb3" id="eff-Vu-sx8"/>
                                                 </connections>
                                             </tableViewCell>

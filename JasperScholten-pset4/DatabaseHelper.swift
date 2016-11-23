@@ -22,6 +22,7 @@ class DatabaseHelper {
     init?() {
         do {
             try setupDatabase()
+            print("Function setupDatabase executed")
         } catch {
             print(error)
             return nil
@@ -45,6 +46,9 @@ class DatabaseHelper {
     private func createTable() throws {
         
         do {
+            // Delete old table after adding new column - be careful!
+            // try dropTable()
+            
             try db!.run(todo.create(ifNotExists: true) {
                 t in
                 
@@ -58,6 +62,14 @@ class DatabaseHelper {
             print(todo[check])
         } catch {
             throw error
+        }
+    }
+    
+    private func dropTable() throws {
+        do {
+            try db!.run(todo.drop(ifExists: true))
+        } catch {
+            print(error)
         }
     }
     
@@ -122,6 +134,43 @@ class DatabaseHelper {
         
     }
     
+    func checkSwitch(index: Int) throws {
+        
+        var rowID: Int64
+        var rowCheck: Bool
+        rowID = 0
+        rowCheck = false
+        var count = 0
+        
+        do {
+            for row in try db!.prepare(todo.select(id, check)) {
+                if count == index {
+                    rowID = row[id]
+                    rowCheck = row[check]
+                }
+                count += 1
+            }
+        } catch {
+            throw error
+        }
+
+        let rowState = todo.filter(id == rowID)
+        
+        if(rowCheck == false) {
+            do {
+                print(try db!.run(rowState.update(check <- true)))
+            } catch {
+                print(error)
+            }
+        } else {
+            do {
+                print(try db!.run(rowState.update(check <- false)))
+            } catch {
+                print(error)
+            }
+        }
+    }
+    
     
     func delete(index: Int) throws {
         
@@ -159,13 +208,5 @@ class DatabaseHelper {
             print(error)
         }
     }*/
-    
-    /*private func dropTable() throws {
-        do {
-            try db!.run(todo.drop(ifExists: true))
-        } catch {
-            print(error)
-        }
-     }*/
  
 }
