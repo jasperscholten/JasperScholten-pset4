@@ -15,6 +15,7 @@ class DatabaseHelper {
     
     private let id = Expression<Int64>("id")
     private let item = Expression<String?>("item")
+    private let check = Expression<Bool>("check")
     
     private var db: Connection?
     
@@ -34,6 +35,7 @@ class DatabaseHelper {
         do {
             db = try Connection("\(path)/db.sqlite3")
             try createTable()
+            print("Function createTable executed")
         } catch {
             throw error
         }
@@ -43,17 +45,20 @@ class DatabaseHelper {
     private func createTable() throws {
         
         do {
-            
             try db!.run(todo.create(ifNotExists: true) {
                 t in
                 
                 t.column(id, primaryKey: .autoincrement)
                 t.column(item)
+                t.column(check)
             })
+            print("Columns in table 'todo'")
+            print(todo[id])
+            print(todo[item])
+            print(todo[check])
         } catch {
             throw error
         }
-    
     }
     
     func countRows() throws -> Int {
@@ -84,9 +89,29 @@ class DatabaseHelper {
         return result
     }
     
+    func populateCheck(index: Int) throws -> Bool {
+        
+        var result = false
+        var count = 0
+        
+        do {
+            for list in try db!.prepare(todo) {
+                if count == index {
+                    result = list[check]
+                }
+                count += 1
+            }
+        } catch {
+            throw error
+        }
+        
+        print(result)
+        return(result)
+    }
+    
     func add(item: String) throws {
         
-        let insert = todo.insert(self.item <- item)
+        let insert = todo.insert(self.item <- item, self.check <- false)
         
         do {
             let rowId = try db!.run(insert)
@@ -124,5 +149,23 @@ class DatabaseHelper {
             print(error)
         }
     }
+    
+    /*func updateCheck(index: Int) throws {
+        do {
+            for row in try db!.prepare(todo.select(check)) {
+                try db!.run(todo.update(check <- false))
+            }
+        } catch {
+            print(error)
+        }
+    }*/
+    
+    /*private func dropTable() throws {
+        do {
+            try db!.run(todo.drop(ifExists: true))
+        } catch {
+            print(error)
+        }
+     }*/
  
 }

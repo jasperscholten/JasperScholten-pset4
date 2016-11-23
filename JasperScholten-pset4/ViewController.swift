@@ -28,6 +28,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             print("Error")
         }
         
+        /*do {
+            try db!.addColumn(check)
+        } catch {
+            print(error)
+        }*/
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,7 +60,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         do {
             cell.listItem.text = try db!.populate(index: indexPath.row)
-            // cell.listItem.text = try db!.populate()
+            print("Table: \(try db!.populateCheck(index: indexPath.row))")
         } catch {
             print(error)
         }
@@ -68,6 +74,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             do {
                 try db!.delete(index: indexPath.row)
                 tableView.deleteRows(at: [indexPath], with: .fade)
+                // try db!.updateCheck(index: indexPath.row)
             } catch {
                 print(error)
             }
@@ -86,6 +93,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             // self.tableView.reloadRows(at: [index], with: .none)
             
         } catch {
+            print("Error thrown:")
             print(error)
         }
     }
