@@ -22,7 +22,6 @@ class DatabaseHelper {
     init?() {
         do {
             try setupDatabase()
-            print("Function setupDatabase executed")
         } catch {
             print(error)
             return nil
@@ -36,7 +35,6 @@ class DatabaseHelper {
         do {
             db = try Connection("\(path)/db.sqlite3")
             try createTable()
-            print("Function createTable executed")
         } catch {
             throw error
         }
@@ -56,10 +54,6 @@ class DatabaseHelper {
                 t.column(item)
                 t.column(check)
             })
-            print("Columns in table 'todo'")
-            print(todo[id])
-            print(todo[item])
-            print(todo[check])
         } catch {
             throw error
         }
