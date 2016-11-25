@@ -35,6 +35,7 @@ class DatabaseHelper {
         do {
             db = try Connection("\(path)/db.sqlite3")
             try createTable()
+            
         } catch {
             throw error
         }
@@ -54,6 +55,7 @@ class DatabaseHelper {
                 t.column(item)
                 t.column(check)
             })
+            
         } catch {
             throw error
         }
@@ -84,7 +86,6 @@ class DatabaseHelper {
             for list in try db!.prepare(todo) {
                 if count == index {
                     result = "\(list[item]!)"
-                    // print("Test: \(result ?? "Something went wrong")")
                 }
                 count += 1
             }
@@ -111,7 +112,6 @@ class DatabaseHelper {
             throw error
         }
         
-        print(result)
         return(result)
     }
     
@@ -152,13 +152,15 @@ class DatabaseHelper {
         
         if(rowCheck == false) {
             do {
-                print(try db!.run(rowState.update(check <- true)))
+                let number = try db!.run(rowState.update(check <- true))
+                print("\(number) rows checked")
             } catch {
                 print(error)
             }
         } else {
             do {
-                print(try db!.run(rowState.update(check <- false)))
+                let number = try db!.run(rowState.update(check <- false))
+                print("\(number) rows checked")
             } catch {
                 print(error)
             }
@@ -192,15 +194,5 @@ class DatabaseHelper {
             print(error)
         }
     }
-    
-    /*func updateCheck(index: Int) throws {
-        do {
-            for row in try db!.prepare(todo.select(check)) {
-                try db!.run(todo.update(check <- false))
-            }
-        } catch {
-            print(error)
-        }
-    }*/
  
 }
