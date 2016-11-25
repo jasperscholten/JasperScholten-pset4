@@ -6,11 +6,6 @@
 //  Copyright © 2016 Jasper Scholten. All rights reserved.
 //
 
-// Add by clicking add button
-// Delete by swiping left - commitEditingStyle delegate function
-// Check (done) via UIswitch
-// Rmember list between sessions
-
 import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -27,15 +22,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             print("Error")
         }
         
-        // http://stackoverflow.com/questions/30635160/how-to-check-if-the-ios-app-is-running-for-the-first-time-using-swift
+        // Method to check if it's the first time an app is launched (after a fresh install). http://stackoverflow.com/questions/30635160/how-to-check-if-the-ios-app-is-running-for-the-first-time-using-swift
         if(UserDefaults.standard.bool(forKey: "HasLaunchedOnce"))
         {
-            // app already launched
             print("Already launched")
         }
         else
         {
-            // This is the first launch ever
             print("First launch")
             do {
                 try db!.add(item: "Type in todo field and click add")
@@ -111,7 +104,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     @IBAction func checkItem(_ sender: Any) {
         
-        // http://stackoverflow.com/questions/39603922/getting-row-of-uitableview-cell-on-button-press-swift-3
+        // Method to retrieve the indexpath of the cell that the user clicks on. http://stackoverflow.com/questions/39603922/getting-row-of-uitableview-cell-on-button-press-swift-3
         let switchPos = (sender as AnyObject).convert(CGPoint.zero, to: self.tableView)
         let indexPath = self.tableView.indexPathForRow(at: switchPos)
         
