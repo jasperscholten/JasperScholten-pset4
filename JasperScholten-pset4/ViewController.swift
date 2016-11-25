@@ -18,6 +18,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Method to dismiss keyboard upon tap outside keyboard. Uses func dismissKeyboard() http://stackoverflow.com/questions/24126678/close-ios-keyboard-by-touching-anywhere-using-swift
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
         if db == nil {
             print("Error")
         }
@@ -113,6 +117,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         } catch {
             print(error)
         }
+    }
+    
+    // 
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
     
 }

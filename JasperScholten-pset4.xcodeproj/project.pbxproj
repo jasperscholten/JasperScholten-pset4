@@ -17,7 +17,6 @@
 		A482F9D21DE85C59004257F1 /* README.MD in Sources */ = {isa = PBXBuildFile; fileRef = A482F9D11DE85C59004257F1 /* README.MD */; };
 		A4A017191DE1BA41003D9231 /* TodoItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A017181DE1BA41003D9231 /* TodoItemCell.swift */; };
 		A4A017361DE330CC003D9231 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A017351DE330CC003D9231 /* DatabaseHelper.swift */; };
-		A4D83A801DE499B5008C9566 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4D83A731DE499A8008C9566 /* SQLite.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,7 +112,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A482F9CC1DE76A50004257F1 /* SQLite.framework in Frameworks */,
-				A4D83A801DE499B5008C9566 /* SQLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
