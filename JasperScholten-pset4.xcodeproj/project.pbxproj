@@ -14,6 +14,7 @@
 		A44A0A751DE1B3BF0041D78E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44A0A731DE1B3BF0041D78E /* LaunchScreen.storyboard */; };
 		A482F9CC1DE76A50004257F1 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4D83A731DE499A8008C9566 /* SQLite.framework */; };
 		A482F9CD1DE76A50004257F1 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A4D83A731DE499A8008C9566 /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A482F9D21DE85C59004257F1 /* README.MD in Sources */ = {isa = PBXBuildFile; fileRef = A482F9D11DE85C59004257F1 /* README.MD */; };
 		A4A017191DE1BA41003D9231 /* TodoItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A017181DE1BA41003D9231 /* TodoItemCell.swift */; };
 		A4A017361DE330CC003D9231 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A017351DE330CC003D9231 /* DatabaseHelper.swift */; };
 		A4D83A801DE499B5008C9566 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4D83A731DE499A8008C9566 /* SQLite.framework */; };
@@ -100,6 +101,7 @@
 		A44A0A711DE1B3BF0041D78E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A44A0A741DE1B3BF0041D78E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A44A0A761DE1B3BF0041D78E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A482F9D11DE85C59004257F1 /* README.MD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.MD; sourceTree = "<group>"; };
 		A4A017181DE1BA41003D9231 /* TodoItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoItemCell.swift; sourceTree = "<group>"; };
 		A4A017351DE330CC003D9231 /* DatabaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
 		A4D83A681DE499A8008C9566 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../../SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 		A44A0A5E1DE1B3BF0041D78E = {
 			isa = PBXGroup;
 			children = (
+				A482F9D11DE85C59004257F1 /* README.MD */,
 				A44A0A691DE1B3BF0041D78E /* JasperScholten-pset4 */,
 				A44A0A681DE1B3BF0041D78E /* Products */,
 				A4D83A681DE499A8008C9566 /* SQLite.xcodeproj */,
@@ -301,6 +304,7 @@
 				A44A0A6D1DE1B3BF0041D78E /* ViewController.swift in Sources */,
 				A4A017191DE1BA41003D9231 /* TodoItemCell.swift in Sources */,
 				A44A0A6B1DE1B3BF0041D78E /* AppDelegate.swift in Sources */,
+				A482F9D21DE85C59004257F1 /* README.MD in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
